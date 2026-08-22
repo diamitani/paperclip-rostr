@@ -1,0 +1,46 @@
+{
+  "name": "@paperclipai/rostr",
+  "version": "1.0.0",
+  "description": "ROSTR Framework for Paperclip - PAL, NPAO, RAG DAL, Hub for non-coder AI agent orchestration",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./pal": {
+      "import": "./dist/pal/index.js",
+      "types": "./dist/pal/index.d.ts"
+    },
+    "./npao": {
+      "import": "./dist/npao/index.js",
+      "types": "./dist/npao/index.d.ts"
+    },
+    "./ragdal": {
+      "import": "./dist/ragdal/index.js",
+      "types": "./dist/ragdal/index.d.ts"
+    },
+    "./hub": {
+      "import": "./dist/hub/index.js",
+      "types": "./dist/hub/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^2.0.0"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  }
+}
